@@ -39,6 +39,20 @@ public class GuiGameSouth extends JPanel {
 
     }
 
+    public void setQuestion(Question q) {
+        this.A = q.a;
+        this.B = q.b;
+        this.C = q.c;
+        this.D = q.d;
+        
+        this.aButton.setText(A);
+        this.bButton.setText(B);
+        this.cButton.setText(C);
+        this.dButton.setText(D);
+        
+        this.repaint();
+    }
+    
     public void init() {
 
         aButton = new JButton(A);

@@ -45,6 +45,11 @@ public class GuiGameCenter extends JPanel {
         this.add(label);
 
     }
+    
+    public void setQuestion(Question q) {
+        this.label.setText(q.ask);
+        this.repaint();
+    }
 
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, null);
