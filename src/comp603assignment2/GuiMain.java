@@ -80,13 +80,14 @@ public class GuiMain extends JFrame {
         
         if (this.correctAnswerOption.equals(answer)) {
             this.score += 1;
-            
+            this.eastPanel.setScore(score);
             if (++this.currentIndex == this.questions.size()) {
                 // TODO: Show won panel.
             }
             this.setCurrentQuestion(this.questions.get(this.currentIndex), score);
         } else {
             this.score = 0;
+            this.eastPanel.setScore(score);
             // TODO:
             // Show failed, and start new game.
             System.out.println("Wrong answer!");

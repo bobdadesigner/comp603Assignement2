@@ -62,6 +62,11 @@ public class GuiGameEast extends JPanel {
         this.add(label);
 
     }
+    
+        public void setScore(int score) {
+        this.scoreY = score;
+        this.repaint();
+    }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g); // do your superclass's painting routine first, and then paint on top of it.
