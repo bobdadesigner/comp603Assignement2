@@ -83,7 +83,7 @@ public class Millionaire {
 
         Scanner sc = new Scanner(System.in);
         int bonus = 0;
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             Question q = list.get(i);
             System.out.println(q.getAsk());
             System.out.println("A " + q.getA());

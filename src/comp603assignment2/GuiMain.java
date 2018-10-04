@@ -91,6 +91,8 @@ public class GuiMain extends JFrame {
             // TODO:
             // Show failed, and start new game.
             System.out.println("Wrong answer!");
+            GuiGameLose gameLose = new GuiGameLose();
+//                            System.exit(0);
         }
     }
     
@@ -112,7 +114,7 @@ public class GuiMain extends JFrame {
     public static void main(String[] args) {
 
         GuiMain game = new GuiMain();
-        
+
         game.addButtonListeners();
 
 
