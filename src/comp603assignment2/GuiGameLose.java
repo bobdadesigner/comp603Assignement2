@@ -8,6 +8,7 @@ package comp603assignment2;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -31,15 +32,18 @@ import javax.swing.border.LineBorder;
 public class GuiGameLose extends JPanel {
 
     private JLabel label;
-    private String display;
+//    private String display;
     private Image img;
     private JButton exitButton, continueButton;
+//    private GuiMain game;
 
     public GuiGameLose() {
+        super(new BorderLayout());
+//        this.img = new ImageIcon("background.png").getImage();
 
-        this.img = new ImageIcon("background.png").getImage();
+//        this.display = "YOU LOSE";
+        label = new JLabel(new ImageIcon("gameOver.png"));
 
-        this.display = "YOU LOSE";
         this.exitButton = new JButton("EXIT");
         this.continueButton = new JButton("RESTART");
 
@@ -53,62 +57,71 @@ public class GuiGameLose extends JPanel {
         exitButton.setBorderPainted(true);
         exitButton.setBorder(new LineBorder(Color.GRAY));
         exitButton.setBackground(Color.BLACK);
-        exitButton.setOpaque(true);
-        exitButton.setPreferredSize(new Dimension(120, 80));
+//        exitButton.setOpaque(true);
+        exitButton.setPreferredSize(new Dimension(120, 50));
 
         continueButton.setForeground(Color.white);
         continueButton.setFont(new Font("Helvetica", Font.PLAIN, 16));
         continueButton.setBorderPainted(true);
         continueButton.setBorder(new LineBorder(Color.GRAY));
         continueButton.setBackground(Color.black);
-        continueButton.setOpaque(true);
-        continueButton.setPreferredSize(new Dimension(120, 80));
+//        continueButton.setOpaque(false);
+        continueButton.setPreferredSize(new Dimension(120, 50));
 
-        this.label = new JLabel(display);
-        this.setPreferredSize(new Dimension(780, 400));
-
-        this.label.setPreferredSize(new Dimension(145, 350));
-        this.label.setForeground(Color.white);
-
-        this.label.setFont(new Font("Helvetica", Font.BOLD, 25));
-
-        this.add(label);
-        this.add(continueButton);
-        this.add(exitButton);
-        buttonListener listener = new buttonListener();
-        exitButton.addActionListener(listener);
-        continueButton.addActionListener(listener);
-
-    }
-
-    private class buttonListener implements ActionListener {
-
-        public void actionPerformed(ActionEvent e) {
-            Object source = e.getSource();
-
-            if (source == exitButton) {
-                System.exit(0);
-            } else if (source == continueButton) {
-                
-                GuiMain game = new GuiMain();
-                game.addButtonListeners();
-
-            }
-        }
-    }
-//    public void addExitButtonActionListener(ActionListener l) {
-//        this.exitButton.addActionListener(l);
-//    }
+//        this.label = new JLabel(display);
+//        this.setPreferredSize(new Dimension(780, 400));
+//        this.label.setPreferredSize(new Dimension(145, 350));
+//        this.label.setForeground(Color.white);
 //
-//    public void addContinueButtonActionListener(ActionListener l) {
-//        this.continueButton.addActionListener(l);
-//    }
+//        this.label.setFont(new Font("Helvetica", Font.BOLD, 25));
+//        this.add(label);
+//this.add(img, BorderLayout.CENTER);
+//this.setLayout(null);
+//exitButton.setLayout(null);
+        JPanel southPanel = new JPanel();
+        southPanel.add(continueButton);
+        southPanel.add(exitButton);
+        southPanel.setBackground(Color.black);
+        this.add(label, BorderLayout.CENTER);
+        this.add(southPanel, BorderLayout.PAGE_END);
 
-    public void setQuestion(Question q) {
-        this.label.setText(q.ask);
-        this.repaint();
+//       exitButton.setLocation(new Point(200, 300));
+//
+//       exitButton.setVisible(true);
+//       exitButton.revalidate();
+//        this.add(exitButton);
+//        buttonListener listener = new buttonListener();
+//        exitButton.addActionListener(listener);
+//        continueButton.addActionListener(listener);
     }
 
+//    private class buttonListener implements ActionListener {
+//
+//        public void actionPerformed(ActionEvent e) {
+//            Object source = e.getSource();
+//
+//            if (source == exitButton) {
+//                System.exit(0);
+//            } else if (source == continueButton) {
+//
+////                game = new GuiMain();
+////                game.addButtonListeners();
+//
+//            }
+//        }
+//    }
+    public void addExitButtonActionListener(ActionListener l) {
+        this.exitButton.addActionListener(l);
+    }
+
+    public void addContinueButtonActionListener(ActionListener l) {
+        this.continueButton.addActionListener(l);
+    }
+
+//    public void setQuestion(Question q) {
+//        this.label.setText(q.ask);
+//        this.repaint();
+//    }
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, null);
 
