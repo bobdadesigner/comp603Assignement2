@@ -11,6 +11,8 @@ import java.awt.Font;
 import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -44,15 +46,14 @@ public class GuiGameSouth extends JPanel {
         this.B = q.b;
         this.C = q.c;
         this.D = q.d;
-        
+
         this.aButton.setText(A);
         this.bButton.setText(B);
         this.cButton.setText(C);
         this.dButton.setText(D);
-        
-        this.repaint();
+//        this.repaint();
     }
-    
+
     public void init() {
 
         aButton = new JButton(A);
@@ -88,10 +89,118 @@ public class GuiGameSouth extends JPanel {
         dButton.setBackground(Color.black);
         dButton.setOpaque(true);
 
-        aButton.setPreferredSize(new Dimension(200, 100));
-        bButton.setPreferredSize(new Dimension(200, 100));
-        cButton.setPreferredSize(new Dimension(200, 100));
-        dButton.setPreferredSize(new Dimension(200, 100));
+        aButton.setPreferredSize(new Dimension(200, 80));
+        bButton.setPreferredSize(new Dimension(200, 80));
+        cButton.setPreferredSize(new Dimension(200, 80));
+        dButton.setPreferredSize(new Dimension(200, 80));
+
+        aButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                aButton.setBackground(Color.darkGray);
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                aButton.setBackground(Color.BLACK);
+                repaint();
+            }
+
+        });
+
+        bButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                bButton.setBackground(Color.darkGray);
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                bButton.setBackground(Color.BLACK);
+                repaint();
+            }
+
+        });
+
+        cButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                cButton.setBackground(Color.darkGray);
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                cButton.setBackground(Color.BLACK);
+                repaint();
+            }
+
+        });
+
+        dButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                dButton.setBackground(Color.darkGray);
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                dButton.setBackground(Color.BLACK);
+                repaint();
+            }
+
+        });
 
         this.add(aButton);
         this.add(bButton);
@@ -114,26 +223,4 @@ public class GuiGameSouth extends JPanel {
     public void addDButtonActionListener(ActionListener l) {
         this.dButton.addActionListener(l);
     }
-
-//    public static void main(String[] args) {
-//
-//        GuiGameSouth game = new GuiGameSouth("ab", "bc", "cd", "ef");
-//
-//        JFrame frame = new JFrame("Who want to be Millionaire"); //create frame to hold our JPanel subclass	
-//
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.getContentPane().add(game);  //add instance of MyGUI to the frame
-//        frame.pack(); //resize frame to fit our Jpanel
-//        frame.setResizable(true);
-//
-//        //Position frame on center of screen 
-//        Toolkit tk = Toolkit.getDefaultToolkit();
-//        Dimension d = tk.getScreenSize();
-//        int screenHeight = d.height;
-//        int screenWidth = d.width;
-//        frame.setLocation(new Point((screenWidth / 2) - (frame.getWidth() / 2), (screenHeight / 2) - (frame.getHeight() / 2)));
-//        //show the frame	
-//        frame.setVisible(true);
-//    }
-
 }

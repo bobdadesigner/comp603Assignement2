@@ -8,19 +8,14 @@ package comp603assignment2;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.Point;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
@@ -32,21 +27,14 @@ import javax.swing.border.LineBorder;
 public class GuiGameLose extends JPanel {
 
     private JLabel label;
-//    private String display;
     private Image img;
     private JButton exitButton, continueButton;
-//    private GuiMain game;
 
     public GuiGameLose() {
         super(new BorderLayout());
-//        this.img = new ImageIcon("background.png").getImage();
-
-//        this.display = "YOU LOSE";
         label = new JLabel(new ImageIcon("gameOver.png"));
-
         this.exitButton = new JButton("EXIT");
         this.continueButton = new JButton("RESTART");
-
         init();
     }
 
@@ -57,7 +45,7 @@ public class GuiGameLose extends JPanel {
         exitButton.setBorderPainted(true);
         exitButton.setBorder(new LineBorder(Color.GRAY));
         exitButton.setBackground(Color.BLACK);
-//        exitButton.setOpaque(true);
+        exitButton.setOpaque(true);
         exitButton.setPreferredSize(new Dimension(120, 50));
 
         continueButton.setForeground(Color.white);
@@ -65,19 +53,63 @@ public class GuiGameLose extends JPanel {
         continueButton.setBorderPainted(true);
         continueButton.setBorder(new LineBorder(Color.GRAY));
         continueButton.setBackground(Color.black);
-//        continueButton.setOpaque(false);
+        continueButton.setOpaque(true);
         continueButton.setPreferredSize(new Dimension(120, 50));
 
-//        this.label = new JLabel(display);
-//        this.setPreferredSize(new Dimension(780, 400));
-//        this.label.setPreferredSize(new Dimension(145, 350));
-//        this.label.setForeground(Color.white);
-//
-//        this.label.setFont(new Font("Helvetica", Font.BOLD, 25));
-//        this.add(label);
-//this.add(img, BorderLayout.CENTER);
-//this.setLayout(null);
-//exitButton.setLayout(null);
+        exitButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                exitButton.setBackground(Color.darkGray);
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                exitButton.setBackground(Color.BLACK);
+                repaint();
+            }
+
+        });
+
+        continueButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                continueButton.setBackground(Color.darkGray);
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                continueButton.setBackground(Color.BLACK);
+                repaint();
+            }
+
+        });
+
         JPanel southPanel = new JPanel();
         southPanel.add(continueButton);
         southPanel.add(exitButton);
@@ -85,31 +117,8 @@ public class GuiGameLose extends JPanel {
         this.add(label, BorderLayout.CENTER);
         this.add(southPanel, BorderLayout.PAGE_END);
 
-//       exitButton.setLocation(new Point(200, 300));
-//
-//       exitButton.setVisible(true);
-//       exitButton.revalidate();
-//        this.add(exitButton);
-//        buttonListener listener = new buttonListener();
-//        exitButton.addActionListener(listener);
-//        continueButton.addActionListener(listener);
     }
 
-//    private class buttonListener implements ActionListener {
-//
-//        public void actionPerformed(ActionEvent e) {
-//            Object source = e.getSource();
-//
-//            if (source == exitButton) {
-//                System.exit(0);
-//            } else if (source == continueButton) {
-//
-////                game = new GuiMain();
-////                game.addButtonListeners();
-//
-//            }
-//        }
-//    }
     public void addExitButtonActionListener(ActionListener l) {
         this.exitButton.addActionListener(l);
     }
@@ -118,34 +127,8 @@ public class GuiGameLose extends JPanel {
         this.continueButton.addActionListener(l);
     }
 
-//    public void setQuestion(Question q) {
-//        this.label.setText(q.ask);
-//        this.repaint();
-//    }
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, null);
-
-    }
-
-    public static void main(String[] args) {
-
-        GuiGameLose game = new GuiGameLose();
-
-        JFrame frame = new JFrame("Who want to be Millionaire"); //create frame to hold our JPanel subclass	
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(game);  //add instance of MyGUI to the frame
-        frame.pack(); //resize frame to fit our Jpanel
-        frame.setResizable(true);
-
-        //Position frame on center of screen 
-        Toolkit tk = Toolkit.getDefaultToolkit();
-        Dimension d = tk.getScreenSize();
-        int screenHeight = d.height;
-        int screenWidth = d.width;
-        frame.setLocation(new Point((screenWidth / 2) - (frame.getWidth() / 2), (screenHeight / 2) - (frame.getHeight() / 2)));
-        //show the frame	
-        frame.setVisible(true);
 
     }
 }
