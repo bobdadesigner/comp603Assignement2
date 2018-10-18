@@ -31,6 +31,7 @@ public class QuestionLoader {
     }
     
     private List<Question> loadFromDatabase() {
+        //new method for stage 2, load from Database
         final String url = "jdbc:derby:QueDB;create=true";  //url of the DB host
         final String username = "pdc";  //your DB username
         final String password = "pdc";   //your DB password
@@ -38,10 +39,11 @@ public class QuestionLoader {
         ResultSet rs;
         
         List<Question> list = new ArrayList<>();
+        //create a ArrayList to save all question.
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             statement = conn.createStatement();
-
+            //get conection to Database
             rs = statement.executeQuery("SELECT Question, A, B, C, D, answer FROM Questions");
 
             while (rs.next()) {
@@ -55,6 +57,7 @@ public class QuestionLoader {
                 q.setAnswer(rs.getString("answer"));
 
                 list.add(q);
+                //set questions and answers to Arraylist
             }
         } catch (SQLException ex) {
             Logger.getLogger(QuestionLoader.class.getName()).log(Level.SEVERE, null, ex);
@@ -65,6 +68,7 @@ public class QuestionLoader {
     }
     
     private List<Question> loadFromFile() {
+    //old method from stage 1, for load question from folder
     List<Question> list = new ArrayList<>();
         String str = null;
         BufferedReader br;

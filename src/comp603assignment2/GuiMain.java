@@ -37,9 +37,9 @@ public class GuiMain extends JFrame {
 
         this.questions = new QuestionLoader().load();
         
-        for (Question q: this.questions) {
-            System.out.println(q.ask + "\n" + "A." + q.a + "\nB." + q.b + "\nC." + q.c + "\nD." + q.d + "\nAnswer: " + q.answer);
-        }
+//        for (Question q: this.questions) {
+//            System.out.println(q.ask + "\n" + "A." + q.a + "\nB." + q.b + "\nC." + q.c + "\nD." + q.d + "\nAnswer: " + q.answer);
+//        }
 
         this.currentIndex = 0;
         Question q = this.questions.get(this.currentIndex);

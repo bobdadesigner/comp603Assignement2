@@ -1,312 +1,56 @@
------------------------------------------------------------------------------
-  #0002 Which of these kills its victims by constriction?
------------------------------------------------------------------------------
- *Andalucia
- *Anaconda
- *Andypandy
- *Annerobinson
+                    + "(2, 'Which disease devastated livestock across the UK during 2001?', 'Hand-and-foot', 'Foot-in-mouth', 'Hand-to-mouth', 'Foot-and-mouth', 'Foot-and-mouth'), "
+                    + "(3, 'Which of these kills its victims by constriction?', 'Andalucia', 'Anaconda', 'Andypandy', 'Annerobinson', 'Anaconda'), "
+                    + "(4, 'In the UK, VAT stands for value-added ...?', 'Transaction', 'Total', 'Tax', 'Trauma', 'Tax'), "
+                    + "(5, 'What are you said to do to a habit when you break it?', 'Throw it', 'Punch it', 'Kick it', 'Eat it', 'Kick it'), "
+                    + "(6, 'Where do you proverbially wear your heart, if you show your true feelings?', 'On your collar', 'On your lapel', 'On your cuff', 'On your sleeve', 'On your sleeve'), "
+                    + "(7, 'What might an electrician lay?', 'Tables', 'Gables', 'Cables', 'Stables', 'Cables'), "
+                    + "(8, 'What would a tattie picker harvest?', 'Raspberries', 'Corn', 'Potatoes', 'Apples', 'Potatoes'), "
+                    + "(9, 'Which of these means adequate space for moving in?', 'Elbow room', 'Foot rest', 'Ear hole', 'Knee lounge', 'Elbow room'), "
+                    + "(10, 'How is a play on words commonly described?', 'Pan', 'Pin', 'Pen', 'Pun', 'Pun'), "
+                    + "(11, 'Which colour is used as a term to describe an illegal market in rare goods?', 'Blue', 'Red', 'Black', 'White', 'Black'), "
+                    + "(12, 'Which character was first played by Arnold Schwarzenegger in a 1984 film?', 'The Demonstrator', 'The Instigator', 'The Investigator', 'The Terminator', 'The Terminator'), "
+                    + "(13, 'Which of these would a film actor like to receive?', 'Oliver', 'Oscar', 'Oliphant', 'Osbert', 'Oscar'), "
+                    + "(14, 'Which of these is a keyboard instrument?', 'Harpsichord', 'Ripcord', 'Pyjama cord', 'Sashcord', 'Harpsichord'), "
+                    + "(15, 'What name is given to the person who traditionally attends the groom on his wedding day?', 'Best man', 'Top man', 'Old man', 'Poor man', 'Best man'), "
+                    + "(16, 'Which word follows North and South to give the names of two continents?', 'Africa', 'America', 'Asia', 'Australia', 'America'), "
+                    + "(17, 'Which country is not an island?', 'Madagascar', 'Cuba', 'Germany', 'Jamaica', 'Germany'), "
+                    + "(18, 'Which is not the name of an English county?', 'Lancashire', 'Leicestershire', 'Liverpoolshire', 'Lincolnshire', 'Liverpoolshire'), "
+                    + "(19, 'Which of these is a fashionable district of London?', 'Bulgaria', 'Belgravia', 'Belgrade', 'Belgium', 'Belgravia'), "
+                    + "(20, 'What name is given to a playing card with a single symbol on it?', 'Whizz', 'Hotshot', 'Ace', 'Star', 'Ace'), "
+                    + "(21, 'What would you normally do with a beret?', 'Eat it', 'Play it', 'Sit on it', 'Wear it', 'Wear it'), "
+                    + "(22, 'Which of these is a tool for shaping and smoothing wood?', 'Train', 'Plane', 'Car', 'Bike', 'Plane'), "
+                    + "(23, 'What do the Americans call what we call sweets?', 'Randy', 'Dandy', 'Sandy', 'Candy', 'Candy'), "
+                    + "(24, 'Which of these is a spicy, Cajun chicken or seafood dish?', 'Gumbo', 'Dumbo', 'Bimbo', 'Rambo', 'Gumbo'), "
+                    + "(25, 'What would you expect to see at the London Aquarium?', 'Flowers', 'Trees', 'Steam rollers', 'Fish', 'Fish'), "
+                    + "(26, 'People who are in a similar unfavourable situation are said to be all in the same ...?', 'Car', 'Plane', 'Boat', 'Tube', 'Boat'), "
+                    + "(27, 'According to the old adage, how many lives does a cat have?', 'Five', 'Seven', 'Nine', 'Ten', 'Nine'), "
+            
 
-Answer: Anaconda
++ "(28, 'The Nativity is the story of whose birth?', 'Jesus Christ', 'Elvis Presley', 'Winston Churchill', 'John F Kennedy', 'Jesus Christ'), "
++ "(29, 'How many moons orbit the Earth?', 'One', 'Two', 'Three', 'Four', 'One'), "
++ "(30, 'In which country would you expect to be greeted with the word bonjour?', 'Italy', 'France', 'Spain', 'Wales', 'France') ");
 
------------------------------------------------------------------------------
-  #0003 Which of these might be used in underwater naval operations?
------------------------------------------------------------------------------
- *Frogmen
- *Newtmen
- *Toadmen
- *Tadpolemen
 
-Answer: Frogmen
 
------------------------------------------------------------------------------
-  #0004 In the UK, VAT stands for value-added ...?
------------------------------------------------------------------------------
- *Transaction
- *Total
- *Tax
- *Trauma
 
-Answer: Tax
 
------------------------------------------------------------------------------
-  #0005 What are you said to do to a habit when you break it?
------------------------------------------------------------------------------
- *Throw it
- *Punch it
- *Kick it
- *Eat it
 
-Answer: Kick it
 
------------------------------------------------------------------------------
-  #0006 Where do you proverbially wear your heart, if you show your true feelings?
------------------------------------------------------------------------------
- *On your collar
- *On your lapel
- *On your cuff
- *On your sleeve
 
-Answer: On your sleeve
 
------------------------------------------------------------------------------
-  #0007 What might an electrician lay?
------------------------------------------------------------------------------
- *Tables
- *Gables
- *Cables
- *Stables
 
-Answer: Cables
 
------------------------------------------------------------------------------
-  #0008 What would a 'tattie picker' harvest?
------------------------------------------------------------------------------
- *Raspberries
- *Corn
- *Potatoes
- *Apples
 
-Answer: Potatoes
 
------------------------------------------------------------------------------
-  #0009 Which of these means adequate space for moving in?
------------------------------------------------------------------------------
- *Elbow room
- *Foot rest
- *Ear hole
- *Knee lounge
 
-Answer: Elbow room
 
------------------------------------------------------------------------------
-  #0010 How is a play on words commonly described?
------------------------------------------------------------------------------
- *Pan
- *Pin
- *Pen
- *Pun
 
-Answer: Pun
 
------------------------------------------------------------------------------
-  #0011 Which colour is used as a term to describe an illegal market in rare goods?
------------------------------------------------------------------------------
- *Blue
- *Red
- *Black
- *White
 
-Answer: Black
 
------------------------------------------------------------------------------
-  #0012 Which character was first played by Arnold Schwarzenegger in a 1984 film?
------------------------------------------------------------------------------
- *The Demonstrator
- *The Instigator
- *The Investigator
- *The Terminator
 
-Answer: The Terminator
+The Nativity is the story of whose birth?', 'Jesus Christ', 'Elvis Presley', 'Winston Churchill', 'John F Kennedy', 'Jesus Christ
 
------------------------------------------------------------------------------
-  #0013 Which of these would a film actor like to receive?
------------------------------------------------------------------------------
- *Oliver
- *Oscar
- *Oliphant
- *Osbert
-
-Answer: Oscar
-
------------------------------------------------------------------------------
-  #0014 In which country would you expect to be greeted with the word 'bonjour'?
------------------------------------------------------------------------------
- *Italy
- *France
- *Spain
- *Wales
-
-Answer: France
-
------------------------------------------------------------------------------
-  #0015 What name is given to the person who traditionally attends the groom on his wedding day?
------------------------------------------------------------------------------
- *Best man
- *Top man
- *Old man
- *Poor man
-
-Answer: Best man
-
------------------------------------------------------------------------------
-  #0016 Which word follows 'North' and 'South' to give the names of two continents?
------------------------------------------------------------------------------
- *Africa
- *America
- *Asia
- *Australia
-
-Answer: America
-
------------------------------------------------------------------------------
-  #0017 Which country is not an island?
------------------------------------------------------------------------------
- *Madagascar
- *Cuba
- *Germany
- *Jamaica
-
-Answer: Germany
-
------------------------------------------------------------------------------
-  #0018 Which is not the name of an English county?
------------------------------------------------------------------------------
- *Lancashire
- *Leicestershire
- *Liverpoolshire
- *Lincolnshire
-
-Answer: Liverpoolshire
-
------------------------------------------------------------------------------
-  #0019 Which of these is a fashionable district of London?
------------------------------------------------------------------------------
- *Bulgaria
- *Belgravia
- *Belgrade
- *Belgium
-
-Answer: Belgravia
-
------------------------------------------------------------------------------
-  #0020 What name is given to a playing card with a single symbol on it?
------------------------------------------------------------------------------
- *Whizz
- *Hotshot
- *Ace
- *Star
-
-Answer: Ace
-
------------------------------------------------------------------------------
-  #0021 What would you normally do with a beret?
------------------------------------------------------------------------------
- *Eat it
- *Play it
- *Sit on it
- *Wear it
-
-Answer: Wear it
-
------------------------------------------------------------------------------
-  #0022 Which of these is a tool for shaping and smoothing wood?
------------------------------------------------------------------------------
- *Train
- *Plane
- *Car
- *Bike
-
-Answer: Plane
-
------------------------------------------------------------------------------
-  #0023 What do the Americans call what we call sweets?
------------------------------------------------------------------------------
- *Randy
- *Dandy
- *Sandy
- *Candy
-
-Answer: Candy
-
------------------------------------------------------------------------------
-  #0024 Which of these is a spicy, Cajun chicken or seafood dish?
------------------------------------------------------------------------------
- *Gumbo
- *Dumbo
- *Bimbo
- *Rambo
-
-Answer: Gumbo
-
------------------------------------------------------------------------------
-  #0025 What would you expect to see at the London Aquarium?
------------------------------------------------------------------------------
- *Flowers
- *Trees
- *Steam rollers
- *Fish
-
-Answer: Fish
-
------------------------------------------------------------------------------
-  #0026 People who are in a similar unfavourable situation are said to be 'all in the same ...'?
------------------------------------------------------------------------------
- *Car
- *Plane
- *Boat
- *Tube
-
-Answer: Boat
-
------------------------------------------------------------------------------
-  #0027 According to the old adage, how many lives does a cat have?
------------------------------------------------------------------------------
- *Five
- *Seven
- *Nine
- *Ten
-
-Answer: Nine
-
------------------------------------------------------------------------------
-  #0028 Which of these is a keyboard instrument?
------------------------------------------------------------------------------
- *Harpsichord
- *Ripcord
- *Pyjama cord
- *Sashcord
-
-Answer: Harpsichord
-
------------------------------------------------------------------------------
-  #0029 The former punk singer John Lydon was known on stage as Johnny ...?
------------------------------------------------------------------------------
- *Horrid
- *Rotten
- *Nasty
- *Hateful
-
-Answer: Rotten
-
------------------------------------------------------------------------------
-  #0030 The name of which plant sounds like a greeting to 'Coronation Street's' Mrs Duckworth?
------------------------------------------------------------------------------
- *Hi mabel
- *G'day june
- *Wotcha di
- *Aloe vera
-
-Answer: Aloe vera
-
------------------------------------------------------------------------------
-  #0031 The Nativity is the story of whose birth?
------------------------------------------------------------------------------
- *Jesus Christ
- *Elvis Presley
- *Winston Churchill
- *John F Kennedy
-
-Answer: Jesus Christ
-
------------------------------------------------------------------------------
-  #0032 How many moons orbit the Earth?
------------------------------------------------------------------------------
- *One
- *Two
- *Three
- *Four
-
-Answer: One
 
 -----------------------------------------------------------------------------
   #0033 By what abbreviation is a compact disc commonly known?

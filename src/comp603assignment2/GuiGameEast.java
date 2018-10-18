@@ -17,6 +17,7 @@ import javax.swing.JPanel;
  * @author xuchang
  */
 public class GuiGameEast extends JPanel {
+    //this calss is for display score on the right hand side
 
     private JLabel label;
     private String score;
@@ -30,6 +31,7 @@ public class GuiGameEast extends JPanel {
         this.scoreY = scoreY;
         squareY = new int[11];
         this.score = "<html><div style='text-align: center;'>1,000,000<BR>900,000<BR>800,000<BR>700,000<BR>600,000<BR>500,000<BR>400,000<BR>300,000<BR>200,000<BR>100,000</html>";
+        //set score
         init();
     }
 
@@ -43,12 +45,14 @@ public class GuiGameEast extends JPanel {
         this.label.setHorizontalAlignment(JLabel.CENTER);
         this.label.setVerticalAlignment(JLabel.CENTER);
         this.add(label);
+        //add a colour block to current score
 
     }
 
     public void setScore(int score) {
         this.scoreY = score;
         this.repaint();
+        //set new score and repaint
     }
 
     public void paintComponent(Graphics g) {
@@ -62,6 +66,7 @@ public class GuiGameEast extends JPanel {
             j -= 21;
         }
         g.fillRoundRect(squareX, squareY[scoreY], squareW, squareH, 12, 12);
+        //draw a colour block to current score
     }
 
 }
