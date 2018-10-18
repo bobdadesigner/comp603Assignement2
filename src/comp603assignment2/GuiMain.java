@@ -29,10 +29,10 @@ public class GuiMain extends JFrame {
     //create right hand side score display area
     private Question currentQuestion;
     //create cuttent question
-    private int score;
+    protected int score;
     private int currentIndex;
     //current index is keep track on how many question did user answer correct
-    private String correctAnswerOption;
+    protected String correctAnswerOption;
     private List<Question> questions;
     //create list of question
     private GuiGameLoseFrame gameLose;
@@ -97,7 +97,7 @@ public class GuiMain extends JFrame {
 
     }
 
-    private void checkAnswerAndStepForward(String answer) {
+    protected void checkAnswerAndStepForward(String answer) {
         //to check answer is correct or not, if correct go to next question, if not show lose panel.
         if (this.correctAnswerOption.equals(answer) && this.score < 9) {
 
@@ -138,7 +138,7 @@ public class GuiMain extends JFrame {
         frame.setVisible(true);
     }
 
-    private void restartGame() {
+    public void restartGame() {
         //when lose set index and score to 0, and ready to restart
         this.currentIndex = 0;
         this.score = 0;

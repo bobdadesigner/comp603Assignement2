@@ -36,7 +36,7 @@ public class DataSeeder {
         }
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
-        //get connection to DB
+            //get connection to DB
 
             statement = conn.createStatement();
             checkTableExisting(conn, "QUESTIONS");

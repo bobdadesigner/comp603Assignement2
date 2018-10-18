@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Fri Oct 19 01:55:26 NZDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-873e-b663-00000de656d0 
-on database directory /Users/xuchang/Documents/GitHub/comp603Assignment2/Comp603Assignment2/QueDB with class loader sun.misc.Launcher$AppClassLoader@6e0be858 
+Fri Oct 19 10:54:57 NZDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-892c-a8ab-00000d993170 
+on database directory /Users/xuchang/Documents/GitHub/comp603Assignment2/Comp603Assignment2/QueDB with class loader sun.misc.Launcher$AppClassLoader@6ff3c5b5 
 Loaded from file:/Users/xuchang/Desktop/db-derby-10.14.2.0-lib/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_181-b13

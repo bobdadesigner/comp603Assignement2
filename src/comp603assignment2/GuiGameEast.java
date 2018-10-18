@@ -17,13 +17,16 @@ import javax.swing.JPanel;
  * @author xuchang
  */
 public class GuiGameEast extends JPanel {
-    //this calss is for display score on the right hand side
+    //this calss is for display score on the right hand side.
+    //the score is fixed, but the colour block behide will indicate what score level you are on.
+    //for example, if socre is 1, the block will behide $100,000, if score is 2, the block will behide $200,000 so on and so forth.
 
     private JLabel label;
     private String score;
     private int squareX = 28;
     private int squareW = 105;
     private int squareH = 20;
+    //coordinate where to draw the colour block behide the score board
     private int scoreY;
     private int[] squareY;
 
