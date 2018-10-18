@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Oct 18 22:41:16 NZDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-868c-f271-00000de62530 
+on database directory /Users/xuchang/Documents/GitHub/comp603Assignment2/Comp603Assignment2/QueDB with class loader sun.misc.Launcher$AppClassLoader@6e0be858 
+Loaded from file:/Users/xuchang/Desktop/db-derby-10.14.2.0-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/Users/xuchang/Documents/GitHub/comp603Assignment2/Comp603Assignment2
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

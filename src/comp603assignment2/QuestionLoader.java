@@ -9,9 +9,16 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,11 +27,41 @@ import java.util.List;
 public class QuestionLoader {
     
     public List<Question> load() {
-        return loadFromFile();
+        return loadFromDatabase();
     }
     
     private List<Question> loadFromDatabase() {
-        return null;
+        final String url = "jdbc:derby:QueDB;create=true";  //url of the DB host
+        final String username = "pdc";  //your DB username
+        final String password = "pdc";   //your DB password
+        Statement statement;
+        ResultSet rs;
+        
+        List<Question> list = new ArrayList<>();
+
+        try (Connection conn = DriverManager.getConnection(url, username, password)) {
+            statement = conn.createStatement();
+
+            rs = statement.executeQuery("SELECT Question, A, B, C, D, answer FROM Questions");
+
+            while (rs.next()) {
+                Question q = new Question();
+                q.setAnswer(rs.getString("Question"));
+                q.setA(rs.getString("A"));
+                q.setB(rs.getString("B"));
+                q.setC(rs.getString("C"));
+                q.setD(rs.getString("D"));
+
+                q.setAnswer(rs.getString("answer"));
+
+                list.add(q);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(QuestionLoader.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        Collections.shuffle(list);
+        return list;
     }
     
     private List<Question> loadFromFile() {

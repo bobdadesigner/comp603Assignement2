@@ -71,7 +71,7 @@ public class Millionaire {
         }
         //to make the questions in random order
         Collections.shuffle(list);
-        //��ʼ����
+
         startgame(list);
 
     }
