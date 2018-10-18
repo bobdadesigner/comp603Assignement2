@@ -5,8 +5,7 @@
  */
 package comp603assignment2;
 
-import static comp603assignment2.Millionaire.startgame;
-import java.sql.Connection;
+
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
