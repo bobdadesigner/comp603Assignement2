@@ -14,6 +14,7 @@ import javax.swing.JFrame;
  * @author xuchang
  */
 public class GuiGameLoseFrame extends JFrame {
+    //create a new JFrame when user lost the game, only display jpanel from GuiGameLose
 
     private GuiGameLose losePanel;
 
@@ -28,9 +29,9 @@ public class GuiGameLoseFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.setResizable(false);
+        //setup JFrame
 
     }
 
-    public static void main(String[] args) {
-    }
+
 }

@@ -25,16 +25,20 @@ import javax.swing.border.LineBorder;
  * @author xuchang
  */
 public class GuiGameLose extends JPanel {
+    //this class is to display a new panel when lost the game, with exit and restart button
 
     private JLabel label;
     private Image img;
-    private JButton exitButton, continueButton;
+    private JButton exitButton, restartButton;
 
     public GuiGameLose() {
         super(new BorderLayout());
         label = new JLabel(new ImageIcon("gameOver.png"));
+        //create display picture
         this.exitButton = new JButton("EXIT");
-        this.continueButton = new JButton("RESTART");
+        this.restartButton = new JButton("RESTART");
+        //create exit and restart button
+
         init();
     }
 
@@ -47,16 +51,19 @@ public class GuiGameLose extends JPanel {
         exitButton.setBackground(Color.BLACK);
         exitButton.setOpaque(true);
         exitButton.setPreferredSize(new Dimension(120, 50));
+        //setup exit button
 
-        continueButton.setForeground(Color.white);
-        continueButton.setFont(new Font("Helvetica", Font.PLAIN, 16));
-        continueButton.setBorderPainted(true);
-        continueButton.setBorder(new LineBorder(Color.GRAY));
-        continueButton.setBackground(Color.black);
-        continueButton.setOpaque(true);
-        continueButton.setPreferredSize(new Dimension(120, 50));
+        restartButton.setForeground(Color.white);
+        restartButton.setFont(new Font("Helvetica", Font.PLAIN, 16));
+        restartButton.setBorderPainted(true);
+        restartButton.setBorder(new LineBorder(Color.GRAY));
+        restartButton.setBackground(Color.black);
+        restartButton.setOpaque(true);
+        restartButton.setPreferredSize(new Dimension(120, 50));
+        //setup restart button
 
         exitButton.addMouseListener(new MouseListener() {
+            //setup when mouse entered and exited button change colour
             @Override
             public void mouseClicked(MouseEvent e) {
             }
@@ -83,7 +90,8 @@ public class GuiGameLose extends JPanel {
 
         });
 
-        continueButton.addMouseListener(new MouseListener() {
+        restartButton.addMouseListener(new MouseListener() {
+            //setup when mouse entered and exited button change colour
             @Override
             public void mouseClicked(MouseEvent e) {
             }
@@ -98,24 +106,25 @@ public class GuiGameLose extends JPanel {
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                continueButton.setBackground(Color.darkGray);
+                restartButton.setBackground(Color.darkGray);
                 repaint();
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                continueButton.setBackground(Color.BLACK);
+                restartButton.setBackground(Color.BLACK);
                 repaint();
             }
 
         });
 
         JPanel southPanel = new JPanel();
-        southPanel.add(continueButton);
+        southPanel.add(restartButton);
         southPanel.add(exitButton);
         southPanel.setBackground(Color.black);
         this.add(label, BorderLayout.CENTER);
         this.add(southPanel, BorderLayout.PAGE_END);
+        //add buttons and image to panel
 
     }
 
@@ -124,11 +133,12 @@ public class GuiGameLose extends JPanel {
     }
 
     public void addContinueButtonActionListener(ActionListener l) {
-        this.continueButton.addActionListener(l);
+        this.restartButton.addActionListener(l);
     }
 
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, null);
+        //display image background
 
     }
 }

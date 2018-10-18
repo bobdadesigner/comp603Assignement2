@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Millionaire {
+    //this class is class from stage 1
 
     public static void main(String[] args) {
 

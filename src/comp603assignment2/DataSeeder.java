@@ -22,8 +22,8 @@ public class DataSeeder {
 
     public static void main(String[] args) {
         final String url = "jdbc:derby:QueDB;create=true";  //url of the DB host
-        final String username = "pdc";  //your DB username
-        final String password = "pdc";   //your DB password
+        final String username = "pdc";  //DB username
+        final String password = "pdc";   //\DB password
         Statement statement;
         ResultSet rs;
 
@@ -73,7 +73,7 @@ public class DataSeeder {
                     + "(29, 'How many moons orbit the Earth?', 'One', 'Two', 'Three', 'Four', 'One'), "
                     + "(30, 'In which country would you expect to be greeted with the word bonjour?', 'Italy', 'France', 'Spain', 'Wales', 'France') ");
 
-            //create questions tables
+            //create questions tables, and put question and answer in to table
             conn.close();
         } catch (SQLException ex) {
             Logger.getLogger(QuestionLoader.class.getName()).log(Level.SEVERE, null, ex);

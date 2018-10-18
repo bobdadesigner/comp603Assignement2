@@ -8,13 +8,10 @@ package comp603assignment2;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Point;
-import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
@@ -23,6 +20,7 @@ import javax.swing.border.LineBorder;
  * @author xuchang
  */
 public class GuiGameSouth extends JPanel {
+    //this class is only for 4 button on the botton of the main frame
 
     private JButton aButton, bButton, cButton, dButton;
 
@@ -36,6 +34,7 @@ public class GuiGameSouth extends JPanel {
         this.B = bAnswer;
         this.C = cAnswer;
         this.D = dAnswer;
+        //set a b c d string
 
         init();
 
@@ -51,10 +50,14 @@ public class GuiGameSouth extends JPanel {
         this.bButton.setText(B);
         this.cButton.setText(C);
         this.dButton.setText(D);
-//        this.repaint();
+        //set string to buttons
+
     }
 
     public void init() {
+        //this method is mainly for setup button, add button listener and add to panel.
+        //i think i got a better way to create and setup button by create a new Mybutton class and extend it.
+        //but because I dont have anymore time when i finished those, so I didn't change anything, but I will in the future
 
         aButton = new JButton(A);
         bButton = new JButton(B);

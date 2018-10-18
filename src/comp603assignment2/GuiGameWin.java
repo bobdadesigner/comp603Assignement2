@@ -25,6 +25,7 @@ import javax.swing.border.LineBorder;
  * @author xuchangs
  */
 public class GuiGameWin extends JPanel {
+    //this class is for create a panel when win the game, only display a win picture and exit button.
 
     private Image img;
     private JButton exitButton;
@@ -33,11 +34,12 @@ public class GuiGameWin extends JPanel {
         super(new BorderLayout());
         this.exitButton = new JButton("EXIT");
         this.img = new ImageIcon("win.png").getImage();
+        //create a exit button and image
         init();
     }
 
     private void init() {
-
+        //thie method is mainly setup button and all mouse listener to change button colour when entered and exited
         exitButton.setForeground(Color.white);
         exitButton.setFont(new Font("Helvetica", Font.PLAIN, 16));
         exitButton.setBorderPainted(true);
@@ -85,6 +87,7 @@ public class GuiGameWin extends JPanel {
 
             if (source == exitButton) {
                 System.exit(0);
+                //when exit button is press, problem quit.
             }
         }
     }
@@ -95,6 +98,7 @@ public class GuiGameWin extends JPanel {
 
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, null);
+        //draw image background
 
     }
 }

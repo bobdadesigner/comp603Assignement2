@@ -25,11 +25,12 @@ import java.util.logging.Logger;
  * @author xuchang
  */
 public class QuestionLoader {
-    
+    // this class is mainly for load all questions and answers
+
     public List<Question> load() {
         return loadFromDatabase();
     }
-    
+
     private List<Question> loadFromDatabase() {
         //new method for stage 2, load from Database
         final String url = "jdbc:derby:QueDB;create=true";  //url of the DB host
@@ -37,7 +38,7 @@ public class QuestionLoader {
         final String password = "pdc";   //your DB password
         Statement statement;
         ResultSet rs;
-        
+
         List<Question> list = new ArrayList<>();
         //create a ArrayList to save all question.
 
@@ -48,7 +49,7 @@ public class QuestionLoader {
 
             while (rs.next()) {
                 Question q = new Question();
-                q.setAnswer(rs.getString("Question"));
+                q.setAsk(rs.getString("Question"));
                 q.setA(rs.getString("A"));
                 q.setB(rs.getString("B"));
                 q.setC(rs.getString("C"));
@@ -62,14 +63,14 @@ public class QuestionLoader {
         } catch (SQLException ex) {
             Logger.getLogger(QuestionLoader.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         Collections.shuffle(list);
         return list;
     }
-    
+
     private List<Question> loadFromFile() {
-    //old method from stage 1, for load question from folder
-    List<Question> list = new ArrayList<>();
+        //old method from stage 1, for load question from folder, didn't use in stage 2
+        List<Question> list = new ArrayList<>();
         String str = null;
         BufferedReader br;
         try {
@@ -118,7 +119,7 @@ public class QuestionLoader {
         }
         //to make the questions in random order
         Collections.shuffle(list);
-        
+
         return list;
     }
 }

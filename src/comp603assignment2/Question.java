@@ -1,6 +1,7 @@
 package comp603assignment2;
 
 public class Question {
+    // this class is from stage 1
      String ask;
 	 String a;
 	 String b;
